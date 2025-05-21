@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Color System */
@@ -8,7 +8,7 @@
   --dark-brown: #2a2219;
   --coral: #ff6f21;
   --sage: #a3b899;
-  --ivory: #f9f0dc;
+  --ivory: #f7ead0;
 
   /* Neutral Tones */
   --black: #1a1a1a;
@@ -22,7 +22,7 @@
   --gray-700: #404040;
   --gray-800: #262626;
 
-  --font-size: 1.5rem;
+  --font-size: 1rem;
   --font-ratio: 2;
 }
 
@@ -65,11 +65,13 @@ html {
   height: 100dvh;
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
     font-family: var(--font-jost);
 
@@ -84,9 +86,9 @@ html {
       }
     }
 
-    @media (width >= 64rem /* 1024px */){
+    @media (width >= 64rem /* 1024px */) {
       section {
-        padding: 4rem 16rem;
+        padding: 3rem 16rem;
       }
     }
   }
@@ -106,7 +108,8 @@ h1 {
     var(--font-size) * var(--font-ratio) * var(--font-ratio) * var(--font-ratio)
   );
   line-height: calc(
-    var(--font-size) * var(--font-ratio) * var(--font-ratio) * (var(--font-ratio) * 0.75)
+    var(--font-size) * var(--font-ratio) * var(--font-ratio) *
+      (var(--font-ratio) * 0.75)
   );
   /* font-weight: 900; */
 }
@@ -131,9 +134,30 @@ img {
   object-position: center;
 }
 
+a{
+  &:hover{
+    color: var(--color-coral);
+  }
+}
+
 .hero-bg {
-  background-image: url("/backgrounds/hero_bg.svg");
+  background-image: url('/backgrounds/hero_bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.sourcing-bg {
+  background-image: url('/images/Copy of 20221022_120609.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }

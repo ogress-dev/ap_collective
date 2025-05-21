@@ -13,7 +13,7 @@ const ActivityCard = ({ title, image }: { title: string; image: string }) => {
     >
       <motion.h4
         whileHover={{ scale: 1.1 }}
-        className="w-18 break-words !font-semibold !text-2xl p-2 bg-coral text-white uppercase absolute top-4 left-4"
+        className="w-18 lg:w-12 break-words !font-semibold !text-2xl lg:!text-base p-2 bg-coral text-white uppercase absolute top-4 left-4"
       >
         {title}
       </motion.h4>

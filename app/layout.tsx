@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar-hidden">
       <body
-        className={`${cormorantGaramond.variable} ${jost.variable} antialiased`}
+        className={`${cormorantGaramond.variable} ${jost.variable} antialiased scrollbar-hidden`}
       >
         {children}
       </body>
