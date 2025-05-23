@@ -13,7 +13,7 @@ const ActivityCard = ({ title, image }: { title: string; image: string }) => {
     >
       <motion.h4
         whileHover={{ scale: 1.1 }}
-        className="w-18 lg:w-12 break-words !font-semibold !text-2xl lg:!text-base p-2 bg-coral text-white uppercase absolute top-4 left-4"
+        className="w-18 lg:w-12 break-words !font-semibold !text-2xl lg:!text-base p-2 bg-coral text-white uppercase absolute top-4 left-4" 
       >
         {title}
       </motion.h4>
@@ -51,7 +51,29 @@ const PhilosophySection = () => {
       transition={{ duration: 0.8 }}
       className="min-h-screen p-4 md:p-8 lg:p-12"
     >
-      <div className="max-w-3xl lg:max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 py-12">
+      <div className="max-w-3xl lg:max-w-5xl mx-auto w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 py-12">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col gap-2 items-center lg:hidden mb-8"
+        >
+          <motion.h1 
+            whileHover={{ scale: 1.1 }} 
+            className="scale-x-[-1] text-6xl"
+          >
+            1
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-sm tracking-wider"
+          >
+            CHAPTER ONE
+          </motion.p>
+        </motion.div>
+
         <motion.p
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -74,9 +96,12 @@ const PhilosophySection = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col gap-2 items-start"
+            className="hidden lg:flex flex-col gap-2 items-start"
           >
-            <motion.h1 whileHover={{ scale: 1.1 }} className="scale-x-[-1]">
+            <motion.h1 
+              whileHover={{ scale: 1.1 }} 
+              className="scale-x-[-1] text-6xl"
+            >
               1
             </motion.h1>
             <motion.p
@@ -85,7 +110,7 @@ const PhilosophySection = () => {
               transition={{ delay: 0.3 }}
               className="text-sm tracking-wider"
             >
-              :one:
+              CHAPTER ONE
             </motion.p>
           </motion.div>
 
@@ -98,7 +123,7 @@ const PhilosophySection = () => {
             We offer <strong>tailored solutions</strong> for brands seeking to
             integrate craftmanship and high-quality materials{" "}
             <strong>into every phase of their production process.</strong> Our
-            services focus on three key areas: Sourcing, De
+            services focus on three key areas: Sourcing, Development, and Production.
           </motion.p>
         </div>
       </div>

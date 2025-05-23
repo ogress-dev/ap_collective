@@ -126,7 +126,7 @@ h3 {
 
 p,
 li {
-  font-size: calc(var(--font-size) * 1);
+  font-size: calc(var(--font-size) * 1.27);
 }
 
 img {
@@ -145,10 +145,23 @@ a{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 }
 
 .sourcing-bg {
   background-image: url('/images/Copy of 20221022_120609.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.development-bg {
+  background-image: url('/images/Copy of SOSTENIB-1-1024x1024.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.production-bg {
+  background-image: url('/images/Copy of PLASTRON  (4).jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,4 +173,7 @@ a{
   &::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
+}
+.image-clip {
+  clip-path: polygon(0% 0.5%, 74% 0%, 88.5% 14.5%, 100% 26%, 100% 100%, 0% 100%);
 }
