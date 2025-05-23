@@ -40,7 +40,7 @@ const ProductionProcess = () => {
 	return (
 		<section className="min-h-screen bg-brown/10">
 			<div className="w-full bg-[#2B1F16] text-[#F5F1E6] px-4 py-3 md:px-8 md:py-5 flex justify-between items-center">
-				<h3 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider whitespace-nowrap">
+				<h3 className="!text-[20px] md:text-3xl lg:text-4xl font-bold tracking-wider whitespace-nowrap">
 					THE PRODUCTION PROCESS
 				</h3>
 				<span className="text-3xl md:text-4xl lg:text-5xl tracking-tight">

@@ -78,7 +78,7 @@ const PhilosophySection = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-sm md:text-base lg:text-lg lg:text-right leading-relaxed"
+          className="!text-sm md:text-base lg:text-lg lg:text-right leading-relaxed"
         >
           Our philosophy is rooted in{" "}
           <strong>integrity, innovation, and respect for craftsmanship.</strong>{" "}
@@ -110,7 +110,7 @@ const PhilosophySection = () => {
               transition={{ delay: 0.3 }}
               className="text-sm tracking-wider"
             >
-              CHAPTER ONE
+              ONE
             </motion.p>
           </motion.div>
 
@@ -118,7 +118,7 @@ const PhilosophySection = () => {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-sm md:text-base lg:text-lg leading-relaxed"
+            className="!text-sm md:text-base lg:text-lg leading-relaxed"
           >
             We offer <strong>tailored solutions</strong> for brands seeking to
             integrate craftmanship and high-quality materials{" "}

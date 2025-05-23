@@ -23,9 +23,10 @@ const Sourcing = () => {
         id="sourcing"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="aspect-[3/4] lg:aspect-video *:!text-ivory bg-gradient-to-br from-black via-brown/60 to-black flex flex-col justify-between items-start">
+        viewport={{ once: true }}        transition={{ duration: 0.8 }}
+        // This controls the page height - aspect-[3/4] means height is 75% of width
+        // Change to h-[150vh] for exact 150 viewport height
+        className="h-[100vh] *:!text-ivory bg-gradient-to-br from-black via-brown/60 to-black flex flex-col justify-between items-start p-12">
         <motion.div
           variants={staggerChildren}
           initial="initial"
@@ -58,7 +59,7 @@ const Sourcing = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}>
-          <p className="max-w-xl">
+          <p className="max-w-xl text-sm text-colour-white">
             We source the finest materials, prioritizing both quality and
             sustainability. Thanks to an extensive network of suppliers across
             Africa and Europe, we select fabrics, accessories, trims, and

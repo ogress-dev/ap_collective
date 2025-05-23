@@ -58,14 +58,24 @@ const MaterialSourcing = () => {
           className="max-w-7xl mx-auto space-y-16"
         >
           {categories.map((category, idx) => (
-            <div key={idx} className="space-y-6">
-              <div>
-                <h3 className="text-xl md:text-2xl font-medium">
-                  {category.title}
-                </h3>
+            <div key={idx} className="space-y-6">              <div className="flex items-baseline gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 md:w-6 md:h-6">
+                    <Image
+                      src="/images/icon.webp"
+                      alt="Category icon"
+                      width={24}
+                      height={24}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-extrabold tracking-wide">
+                    {category.title}
+                  </h3>
+                </div>
                 {category.subtitle && (
-                  <p className="text-sm mt-1 text-gray-600">
-                    {category.subtitle}
+                  <p className="text-sm text-gray-600 italic">
+                    &quot;{category.subtitle}&quot;
                   </p>
                 )}
               </div>
@@ -91,14 +101,15 @@ const MaterialSourcing = () => {
                         alt={item.name}
                         fill
                         className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <p className="text-ivory text-sm md:text-base font-medium">
+                      />                      <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        {/* Hover overlay text size - adjust the text-[8px] for mobile and text-sm for larger screens */}
+                        <p className="text-ivory text-[8px] sm:text-xs md:text-sm font-medium">
                           {item.name}
                         </p>
                       </div>
                     </motion.div>
-                    <p className="text-[10px] md:!text-xs text-center text-black\/80 uppercase tracking-wider">
+                    {/* Below image text size - adjust the text-[8px] for mobile and text-xs for larger screens */}
+                    <p className="!text-[13px] sm:text-[10px] md:text-xs text-center text-black\/80 uppercase tracking-wider">
                       {item.name}
                     </p>
                   </div>

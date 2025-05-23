@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant, Jost } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "./(home)/components/ScrollToTop";
 
 const cormorantGaramond = Cormorant({
   variable: "--font-cormorant-garamond",
@@ -25,10 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scrollbar-hidden">
-      <body
-        className={`${cormorantGaramond.variable} ${jost.variable} antialiased scrollbar-hidden`}
+      <body        className={`${cormorantGaramond.variable} ${jost.variable} antialiased scrollbar-hidden relative`}
       >
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

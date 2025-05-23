@@ -23,9 +23,10 @@ const Production = () => {
         id="production"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="aspect-[3/4] lg:aspect-video *:!text-ivory bg-gradient-to-br from-black via-brown/60 to-black flex flex-col justify-between items-start">
+        viewport={{ once: true }}        transition={{ duration: 0.8 }}
+        // This controls the page height - you can adjust the 150vh value
+        // 150vh = 150% of viewport height
+        className="!h-[100vh] *:!text-ivory bg-gradient-to-br from-black via-brown/60 to-black flex flex-col justify-between items-start p-12">
         <motion.div
           variants={staggerChildren}
           initial="initial"
@@ -58,7 +59,7 @@ const Production = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}>
-          <p className="max-w-xl">
+          <p className="max-w-xl ">
             In the production phase, we provide comprehensive and integrated support, from creating critical paths (CP) and timelines to negotiating prices and meet cost objectives. Leveraging our network of selected factories, we allocate production to the most suitable sites, ensuring quality and adherence to deadlines. We also manage orders and material handling (RM), oversee quality control (QC), and handle logistics, coordinating transportation to ensure that each product arrives on time and in perfect condition.
           </p>
         </motion.div>
